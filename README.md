@@ -1,3 +1,7 @@
+# Why did we work this repo?
+
+See comments in this issue: <https://tellyo.atlassian.net/browse/TRD-10659>
+
 ![Video.js logo][logo]
 
 # [Video.js - HTML5 Video Player][vjs]

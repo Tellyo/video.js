@@ -42,3 +42,5 @@ lang/zh-Han*.json
 
 # netlify deploy
 deploy/
+
+!dist/video.min.js

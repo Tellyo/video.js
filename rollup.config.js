@@ -58,27 +58,19 @@ const primedBabel = babel({
   exclude: 'node_modules/**(!http-streaming)',
   compact: false,
   presets: [
-    ['@babel/preset-env', {
-      targets: [
-        'last 3 major versions',
-        'Firefox ESR',
-        // This ensures support for certain smart TVs (ex. LG WebOS 4)
-        'Chrome >= 53',
-        'not dead',
-        'not ie 11',
-        'not baidu 7',
-        'not and_qq 11',
-        'not and_uc 12',
-        'not op_mini all'
-      ],
-      bugfixes: true,
-      loose: true,
-      modules: false
-    }]
+    [
+      '@babel/preset-env',
+      {
+        targets: {
+          browsers: ['ie >= 10', 'last 1 version']
+        },
+        bugfixes: true,
+        loose: true,
+        modules: false
+      }
+    ]
   ],
-  plugins: [
-    ['@babel/plugin-transform-runtime', {regenerator: false}]
-  ]
+  plugins: [['@babel/plugin-transform-runtime', { regenerator: false }]]
 });
 const primedExternalGlobals = externalGlobals({
   'global': 'window',
